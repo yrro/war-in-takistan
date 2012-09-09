@@ -115,7 +115,7 @@ class Mission
 	randomSeed=4546277;
 	class Intel
 	{
-		briefingName="WAR IN LINGOR 1.6";
+		briefingName="WAR IN LINGOR 1.6 09-09-2012";
 		briefingDescription=War Context and War in Takistan by code34. Adapted for Lingor Island by slerbal.";
 		resistanceWest=0;
 		resistanceEast=1;
