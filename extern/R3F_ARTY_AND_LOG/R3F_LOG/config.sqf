@@ -41,7 +41,8 @@ R3F_LOG_CFG_remorqueurs =
 	"BWMod_Fuchs_BAT_Desert",
 	"BWMod_Fuchs_BAT_ISAF",
 	"AMT_Dingo2A2_isaf",
-	"AMT_Dingo2a2_MG_Isaf"
+	"AMT_Dingo2a2_MG_Isaf",
+	"TowingTractor"
 ];
 
 /**
@@ -51,7 +52,16 @@ R3F_LOG_CFG_remorqueurs =
 R3F_LOG_CFG_objets_remorquables =
 [
 	"StaticCannon",
-	"RubberBoat"
+	"RubberBoat",
+	"ibr_a4",
+	"F35B",
+	"ibr_as350_pmc",
+	"ibr_as350_pol",
+	"BAF_Apache_AH1_D",
+	"AH64D_EP1",
+	"LIN_UH1",
+	"A10",
+	"AV8B2"
 ];
 
 
@@ -63,7 +73,10 @@ R3F_LOG_CFG_objets_remorquables =
  */
 R3F_LOG_CFG_heliporteurs =
 [
-	"CH_47F_EP1"
+	"CH_47F_EP1",
+	"UH60M_EP1",
+	"LIN_UH1",
+	"MH6J_EP1"
 ];
 
 /**
@@ -72,11 +85,48 @@ R3F_LOG_CFG_heliporteurs =
  */
 R3F_LOG_CFG_objets_heliportables =
 [
-	"HMMWV_M1151_M2_DES_EP1",
-	"HMMWV_M998A2_SOV_DES_EP1",
-	"HMMWV_M998_crows_MK19_DES_EP1",
+	"A10_US_EP1",
+	"A10",
+	"AH64D_EP1",
+	"AH6X_EP1",
 	"ATV_US_EP1",
-	"LandRover_Special_CZ_EP1"
+	"AV8B2",
+	"BAF_Apache_AH1_D",
+	"BAF_Jackal2_GMG_W",
+	"BRDM2_INS",
+	"BTR60_TK_EP1",
+	"CH_47F_EP1",
+	"F35B",
+	"HMMWV_Avenger_DES_EP1",
+	"HMMWV_M1151_M2_DES_EP1",
+	"HMMWV_M998_crows_MK19_DES_EP1",
+	"HMMWV_M998A2_SOV_DES_EP1",
+	"ibr_a4",
+	"ibr_as350_pmc",
+	"ibr_as350_pol",
+	"ibr_blkhmw",
+	"ibr_gunboat_gal",
+	"ibr_VAB_policia",
+	"ibr_van_FEA",
+	"ibr_VBL_127",
+	"ibr_VBL_policia",
+	"JetSkiYanahui_White",
+	"LandRover_Special_CZ_EP1",
+	"LIN_UH1",
+	"M1126_ICV_M2_EP1",
+	"M1126_ICV_mk19_EP1",
+	"M1128_MGS_EP1",
+	"M1129_MC_EP1",
+	"M1A1_US_DES_EP1", 
+	"M1A2_TUSK_MG",
+	"M1A2_US_TUSK_MG_EP1",
+	"M2A2_EP1",
+	"M2A3_EP1",
+	"MH6J_EP1",
+	"RHIB2Turret",
+	"SUV_UN_EP1",
+	"UH1H_TK_EP1",
+	"UralRefuel_INS"
 ];
 
 
@@ -114,6 +164,9 @@ R3F_LOG_CFG_transporteurs =
 	["M113_UN_EP1", 16],
 	["BAF_Jackal2_L2A1_D", 10],
 	["BAF_Jackal2_GMG_D", 10],
+	["ibr_blkhmw", 10],
+	["ibr_van_FEA", 10],
+	["ibr_gunboat_gal", 10],
 	["MH6J_EP1", 6],
 	["ArmoredSUV_PMC", 8],
 	["ACE_Truck5tMGOpen", 50],
