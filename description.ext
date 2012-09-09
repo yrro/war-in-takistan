@@ -1,13 +1,13 @@
 showGps = 1;
 
 loadScreen = "pics\loading.jpg";
-OnLoadMission  = "War In Takistan";
+OnLoadMission  = "War In Lingor";
 
 class Header
 {
 	gameType = COOP;
 	minPlayers = 1;
-	maxPlayers = 40;
+	maxPlayers = 35;
 };
 
 // description.ext settings for revive
@@ -636,7 +636,7 @@ class Params
 		title = "NUMBER OF MISSIONS TO COMPLETE CAMPAIGN";
 		values[] = {3, 5, 7, 9, 11, 21, 41, 61};
 		texts[] = {"2", "4", "6", "8", "10", "20", "40", "60"};
-		default = 9;
+		default = 7;
 	};
 
 	class wcwithhq
@@ -644,7 +644,7 @@ class Params
 		title = "3 BEST PLAYERS CHOOSE MISSIONS OF PLAYERS";
 		values[] = {0, 1};
 		texts[] = {"NO", "YES"};
-		default = 0;
+		default = 1;
 	};
 
 	class wcskiptime
@@ -676,7 +676,7 @@ class Params
 		title = "ENEMIES FORCE ON ZONE";
 		values[] = {1, 2, 3, 4, 5};
 		texts[] = {"WEAK", "NORMAL", "STRONG", "VERY STRONG", "AWESOME"};
-		default = 2;
+		default = 3;
 	};
 
 	class wclevelmaxoutofcity
@@ -692,7 +692,7 @@ class Params
 		title = "ENEMIES AIR FORCE ON ZONE";
 		values[] = {0, 1, 2, 4};
 		texts[] = {"OFF", "WEAK: 1 PLANE", "NORMAL: 2 PLANES", "STRONG: 4 PLANES"};
-		default = 0;
+		default = 2;
 	};
 
 
@@ -701,7 +701,7 @@ class Params
 		title = "ENEMIES REINFORCMENT FORCE";
 		values[] = {0, 2, 4, 6};
 		texts[] = {"OFF", "WEAK: 2 GROUPS", "NORMAL: 4 GROUPS", "STRONG: 6 GROUPS"};
-		default = 2;
+		default = 4;
 	};
 
 	class wcconvoylevel
@@ -709,7 +709,7 @@ class Params
 		title = "ENEMIES VEHICLES PATROL ON MAP";
 		values[] = {0, 5, 10, 15};
 		texts[] = {"OFF", "WEAK: 5 VEHICLES", "NORMAL: 10 VEHICLES", "STRONG: 15 VEHICLES"};
-		default = 5;
+		default = 10;
 	};
 
 	class wcaalevel
@@ -741,7 +741,7 @@ class Params
 		title = "MAX VIEW DISTANCE";
 		values[]={2500,3000,3500,4000,5000,7500,10000};
 		texts[]={"2500","3000","3500","4000","5000","7500","10000"};
-		default=3000;
+		default=5000;
 	};
 
 	class wcwithcam
@@ -754,7 +754,7 @@ class Params
 
 	class wcwithmhq
 	{
-		title = "MHQ IS AVALAIBLE";
+		title = "MHQ IS AVAILABLE";
 		values[] = {0, 1};
 		texts[] = {"NO", "YES"};
 		default = 1;
@@ -762,7 +762,7 @@ class Params
 
 	class wcrecruitberanked
 	{
-		title = "PLAYERS MUST BE RANKED TO RECRUIT SOME IA";
+		title = "PLAYERS MUST BE RANKED TO RECRUIT AI SOLDIERS";
 		values[] = {0,1};
 		texts[] = {"NO", "YES"};
 		default = 1;
@@ -804,7 +804,7 @@ class Params
 	{
 		title = "PLAYERS CAN BUILD AT MHQ";
 		values[] = {1, 2, 3};
-		texts[] = {"NONE", "ATV", "ALL VEHICLES"};
+		texts[] = {"NONE", "ATV/HMMMV/JACKAL", "ALL VEHICLES"};
 		default = 2;
 	};
 
@@ -821,7 +821,7 @@ class Params
 		title = "PLAYERS CAN DETECT IED";
 		values[] = {0, 1};
 		texts[] = {"NO (ONLY ENGINEERS)", "YES (EVERYBODY)"};
-		default = 1;
+		default = 0;
 	};
 
 	class wcwithinjuredeffect
@@ -874,7 +874,7 @@ class Params
 
 	class wcwithteleportflagatend
 	{
-		title = "TELEPORT FLAG APPEAR ON ZONE AT END OF OPERATIONS";
+		title = "TELEPORT FLAG APPEARS ON ZONE AT END OF OPERATIONS";
 		values[] = {0, 1};
 		texts[] = {"NO", "YES"};
 		default = 1;
@@ -934,7 +934,7 @@ class Params
 		title = "MAX CIVIL VEHICLES PER TOWN";
 		values[] = {0, 1, 3, 5};
 		texts[] = {"OFF", "POOR: 1 VEHICLE", "NORMAL: 3 VEHICLES", "A LOT: 5 VEHICLES"};
-		default = 1;
+		default = 3;
 	};
 
 	class wcwithied
@@ -1006,7 +1006,7 @@ class Params
 		title = "ENEMIES USE SEA PATROL";
 		values[] = {0, 1};
 		texts[] = {"NO", "YES"};
-		default = 0;
+		default = 1;
 	};
 
 	class wcautoloadweapons
