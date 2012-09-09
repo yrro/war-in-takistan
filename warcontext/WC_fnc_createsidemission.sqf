@@ -1068,7 +1068,7 @@
 		};
 
 		case 76: {
-			_missiontext = [_missionname,"Recording a conversation"];
+			_missiontext = [_missionname,"Record a conversation"];
 			_group = createGroup east;
 			_vehicle = _group createUnit ["TK_Soldier_Officer_EP1", _position, [], 0, "NONE"];
 			_vehicle2 = _group createUnit ["TK_GUE_Warlord_EP1", _position, [], 0, "NONE"];
@@ -1077,8 +1077,109 @@
 			wcbonusfame = 0;
 		};
 
+		case 77: {
+			_missiontext = [_missionname, "Destroy a UniSol cyborg"];
+			_group = createGroup east;
+			_vehicle = _group createUnit ["ibr_cyborg", _position, [], 0, "NONE"];
+			_buildings = nearestObjects [position _vehicle, ["House"], 350];
+			_arrayofpos = [];
+			{
+				if(getdammage _x == 0) then {
+					_index = 0;
+					while { format ["%1", _x buildingPos _index] != "[0,0,0]" } do {
+						_position = _x buildingPos _index;
+						//if (_position select 2 > 2) then {
+							_arrayofpos = _arrayofpos + [_position];
+						//};
+						_index = _index + 1;
+						sleep 0.05;
+					};
+				};
+			}foreach _buildings;
+			wcgarbage = [_vehicle] spawn {
+				private ["_unit", "_enemy"];
+				_unit = _this select 0;
+				while {alive _unit} do {
+					_enemy = (nearestObjects [_unit, ["Man"], 150]) select 1;
+					if(side _enemy in wcside) then {
+						_unit dotarget _enemy;
+						_unit dofire _enemy;
+					};
+					sleep 1;
+				};
+			};
+			_position = _arrayofpos call BIS_fnc_selectRandom;
+			_vehicle setpos _position;
+			_vehicle setUnitPos "Up"; 
+			dostop _vehicle;
+			wcgarbage = [_vehicle, wcskill] spawn WC_fnc_setskill;
+			_missiontype = "eliminate";
+			wcbonusfame = 0.1;
+		};
 		
+		case 78: {
+			_missiontext = [_missionname, "Capture a UniSol cyborg"];
+			_group = createGroup east;
+			_vehicle = _group createUnit ["ibr_cyborg2", _position, [], 0, "NONE"];
+			removeallweapons _vehicle;
+			wcgarbage = [_vehicle] spawn WC_fnc_jail;
+			_missiontype = "jail";
+			wcbonusfame = 0;
+		};
 		
+		case 79: {
+			_missiontext = [_missionname, "Capture a cartel drug chemist"];
+			_group = createGroup east;
+			_vehicle = _group createUnit ["ibr_scientist2", _position, [], 0, "NONE"];
+			removeallweapons _vehicle;
+			wcgarbage = [_vehicle] spawn WC_fnc_jail;
+			_missiontype = "jail";
+			wcbonusfame = 0;
+		};		
+		
+		case 80: {
+			_missiontext = [_missionname,"Defend a Presidential Palace"];
+			_vehicle = (nearestObjects [_position, ["flag_gal"], 400]) call BIS_fnc_selectRandom;
+			_vehicle setVehicleInit "this addAction ['<t color=''#ff4500''>Defend the Palace</t>', 'warcontext\actions\WC_fnc_dobegindefend.sqf',[],6,false];";
+			wcgarbage = [_vehicle] spawn WC_fnc_defend;
+			processInitCommands;
+			_missiontype = "defend";
+			wcbonusfame = 0;
+			wcradio setdamage 1;	
+		};		
+	
+		case 81: {
+			_missiontext = [_missionname, "Steal experimental new drugs"];
+			_house = nearestObjects [_position, ["House"], 500];
+			_house = _house call BIS_fnc_selectRandom;
+			_vehicle = createVehicle ["ibr_cocaine", position _house, [], 0, "NONE"];
+			_buildings = nearestObjects [position _vehicle, ["House"], 350];
+			_arrayofpos = [];
+			{
+				if(getdammage _x == 0) then {
+					_index = 0;
+					while { format ["%1", _x buildingPos _index] != "[0,0,0]" } do {
+						_position = _x buildingPos _index;
+						_arrayofpos = _arrayofpos + [_position];
+						_index = _index + 1;
+						sleep 0.05;
+					};
+				};
+			}foreach _buildings;
+			_position = _arrayofpos call BIS_fnc_selectRandom;
+			_vehicle setpos _position;
+			wcgarbage = [_vehicle] spawn WC_fnc_steal;
+			_missiontype = "steal";
+			wcbonusfame = 0;
+		};
+		
+		case 82: {
+			_missiontext = [_missionname, "Secure FOB Eddie"];
+			_vehicle = (nearestObjects [_position, ["FlagCarrierNATO_EP1"], 400]) call BIS_fnc_selectRandom;
+			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
+			_missiontype = "secure";
+			wcbonusfame = 0;
+		};			
 		
 		case 100: {
 			_missiontext = [_missionname," Kill the enemy leader"];

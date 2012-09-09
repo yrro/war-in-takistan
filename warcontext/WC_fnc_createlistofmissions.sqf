@@ -34,7 +34,8 @@
 
 	_thislist = [];
 
-	_maxnumberofmission = 76;
+	// Add a mission? Increment this!
+	_maxnumberofmission = 81;
 
 	if(wclevel < 10) then {
 		_countofmission = 1 + ceil(random 10);
@@ -127,6 +128,20 @@
 			_vehicle = (nearestObjects [getmarkerpos "respawn_west", ["Land_Ind_FuelStation_Feed_EP1"], 20000]) call BIS_fnc_selectRandom;
 			_position = position _vehicle;
 		};
+		
+		if(_missionnumber == 80) then {
+			_numberofgroup = 5; 
+			_numberofvehicle = 5;
+			_vehicle = (nearestObjects [getmarkerpos "respawn_west", ["flag_gal"], 20000]) call BIS_fnc_selectRandom;
+			_position = position _vehicle;
+		};		
+		
+		if(_missionnumber == 82) then {
+			_numberofgroup = 10; 
+			_numberofvehicle = 12;
+			_vehicle = (nearestObjects [getmarkerpos "respawn_west", ["FlagCarrierNATO_EP1"], 20000]) call BIS_fnc_selectRandom;
+			_position = position _vehicle;
+		};			
 
 		if(_missionnumber == 100) then { _numberofgroup = 16; _numberofvehicle = 10; };
 
