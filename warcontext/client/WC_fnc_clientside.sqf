@@ -131,6 +131,10 @@
 		player addaction ["<t color='#dddd00'>"+localize "STR_WC_MENUUNFLIPVEHICLE"+"</t>","warcontext\actions\WC_fnc_dounflipvehicle.sqf",[],-1,false];
 	};
 
+	if ((typeOf player in wcpilotclass) or (typeOf player in wccommanderclass)) then {
+		player addaction ["<t color='#dddd00'>"+localize "STR_WC_MENUUNLOCKVEHICLE"+"</t>","warcontext\actions\WC_fnc_dounlockvehicle.sqf",[],-1,false];
+	};	
+
 	wcgarbage = [] spawn {
 		private ["_oldlevel", "_ranked"];
 
