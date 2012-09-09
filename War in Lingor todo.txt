@@ -1,0 +1,3 @@
+
+1. Add in Civilian reporter faction - base them in a town with a reporter's van :)
+2. Add in friendly generation script for friendly forces
