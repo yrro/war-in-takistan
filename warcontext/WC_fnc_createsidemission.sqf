@@ -54,9 +54,9 @@
 		};
 
 		case 1: {
-			_missiontext = [_missionname, "Kill gold trafficant"];
+			_missiontext = [_missionname, "Kill a drug trafficker"];
 			_group = createGroup east;
-			_vehicle = _group createUnit ["Functionary1_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["ibr_drg_pilot", _position, [], 0, "NONE"];
 			_buildings = nearestObjects [position _vehicle, ["House"], 350];
 			_arrayofpos = [];
 			{
@@ -92,7 +92,7 @@
 		};
 
 		case 2: {
-			_missiontext = [_missionname, "Kill a nuclear scientist"];
+			_missiontext = [_missionname, "Kill a biochemist"];
 			_group = createGroup east;
 			_vehicle = _group createUnit ["Dr_Hladik_EP1", _position, [], 0, "NONE"];
 			_buildings = nearestObjects [position _vehicle, ["House"], 350];
@@ -130,7 +130,7 @@
 		};
 
 		case 3: {
-			_missiontext = [_missionname,"Destroy the barracks location"];
+			_missiontext = [_missionname,"Destroy the barracks"];
 			_vehicle = createVehicle ["Land_Barrack2_EP1", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "destroy";
@@ -139,7 +139,7 @@
 
 		case 4: {
 			_missiontext = [_missionname, "Destroy the ural refuel"];
-			_vehicle = createVehicle ["UralRefuel_TK_EP1", _position, [], 0, "NONE"];
+			_vehicle = createVehicle ["UralRefuel_INS", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_vehicle setVehicleInit "this lock true;";
 			processInitCommands;
@@ -159,9 +159,9 @@
 		};
 
 		case 6: {
-			_missiontext = [_missionname, "Kill a takistani commander"];
+			_missiontext = [_missionname, "Kill a Lingorian rebel commander"];
 			_group = createGroup east;
-			_vehicle = _group createUnit ["TK_Aziz_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["LIN_Officer", _position, [], 0, "NONE"];
 			_buildings = nearestObjects [position _vehicle, ["House"], 350];
 			_arrayofpos = [];
 			{
@@ -199,7 +199,7 @@
 		};
 
 		case 7: {
-			_missiontext = [_missionname, "Destroy a bmp2 HQ"];
+			_missiontext = [_missionname, "Destroy a BMP2 HQ"];
 			_vehicle = createVehicle ["BMP2_HQ_TK_unfolded_EP1", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
@@ -229,7 +229,7 @@
 		};
 
 		case 10: {
-			_missiontext = [_missionname, "Destroy the smuggled cargo"];
+			_missiontext = [_missionname, "Destroy the drugs shipment"];
 			_vehicle = createVehicle ["Land_Misc_Cargo1E_EP1", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
@@ -241,8 +241,8 @@
 		};
 
 		case 11: {
-			_missiontext = [_missionname,"Destroy the enemy airfac"];
-			_vehicle = createVehicle ["TK_WarfareBAircraftFactory_Base_EP1", _position, [], 0, "NONE"];
+			_missiontext = [_missionname,"Destroy the enemy generator"];
+			_vehicle = createVehicle ["PowGen_Big_EP1", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "destroy";
 			wcbonusfame = -0.1;
@@ -250,7 +250,7 @@
 		};
 
 		case 12: {
-			_missiontext = [_missionname,"Destroy a commando group"];
+			_missiontext = [_missionname,"Destroy a mercenary group"];
 			_vehicle = createVehicle ["Mi17_TK_EP1", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
@@ -265,7 +265,7 @@
 
 		case 13: {
 			_missiontext = [_missionname, "Destroy a transport chopper"];
-			_vehicle = createVehicle ["UH1H_TK_GUE_EP1", _position, [], 0, "NONE"];
+			_vehicle = createVehicle ["LIN_UH1", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
 			_camo setdir getdir _vehicle;
@@ -332,7 +332,7 @@
 		};
 
 		case 17: {
-			_missiontext = [_missionname, "Destroy the heavy factory"];
+			_missiontext = [_missionname, "Destroy the drugs factory"];
 			_vehicle = createVehicle ["TK_WarfareBHeavyFactory_Base_EP1", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "destroy";
@@ -342,7 +342,7 @@
 		case 18: {
 			_missiontext = [_missionname, "Eliminate suicide bomber"];
 			_group = createGroup east;
-			_type = ["TK_CIV_Takistani06_EP1", "TK_GUE_Bonesetter_EP1", "TK_CIV_Woman01_EP1", "TK_GUE_Warlord_EP1"] call BIS_fnc_selectRandom;
+			_type = ["ibr_fea2", "ibr_arl_stoner1", "ibr_gangman_blue", "ibr_lingorman5"] call BIS_fnc_selectRandom;
 			_vehicle = _group createUnit [_type, _position, [], 0, "NONE"];
 			_buildings = nearestObjects [position _vehicle, ["House"], 350];
 			_arrayofpos = [];
@@ -380,9 +380,9 @@
 		};
 
 		case 19: {
-			_missiontext = [_missionname, "Kill a war lord"];
+			_missiontext = [_missionname, "Kill a drug lord"];
 			_group = createGroup east;
-			_vehicle = _group createUnit ["TK_GUE_Warlord_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["ibr_drg_lord", _position, [], 0, "NONE"];
 			_buildings = nearestObjects [position _vehicle, ["House"], 350];
 			_arrayofpos = [];
 			{
@@ -422,9 +422,9 @@
 		};
 
 		case 20: {
-			_missiontext = [_missionname, "Kill a takistani officer"];
+			_missiontext = [_missionname, "Kill a rebel Lingorian officer"];
 			_group = createGroup east;
-			_vehicle = _group createUnit ["TK_Soldier_Officer_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["ibr_arl_officer", _position, [], 0, "NONE"];
 			_buildings = nearestObjects [position _vehicle, ["House"], 350];
 			_arrayofpos = [];
 			{
@@ -463,7 +463,7 @@
 
 		case 21: {
 			_missiontext = [_missionname, "Destroy an AA pod"];
-			_vehicle = createVehicle ["ZU23_TK_EP1", _position, [], 0, "NONE"];
+			_vehicle = createVehicle ["zsu57_ARL", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "destroy";
 			wcbonusfame = 0;
@@ -507,7 +507,7 @@
 
 		case 26: {
 			_missiontext = [_missionname, "Destroy a ZSU"];
-			_vehicle = createVehicle ["ZSU_TK_EP1", _position, [], 0, "NONE"];
+			_vehicle = createVehicle ["ZSU_INS", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
 			_camo setdir getdir _vehicle;
@@ -519,7 +519,7 @@
 
 		case 27: {
 			_missiontext = [_missionname, "Destroy a T72"];
-			_vehicle = createVehicle ["T72_TK_EP1", _position, [], 0, "NONE"];
+			_vehicle = createVehicle ["T72_INS", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
 			_camo setdir getdir _vehicle;
@@ -530,7 +530,7 @@
 		};
 
 		case 28: {
-			_missiontext = [_missionname, "Liberate the hostage"];
+			_missiontext = [_missionname, "Rescue a hostage"];
 			_group = createGroup west;
 			_vehicle = _group createUnit ["Haris_Press_EP1", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_liberatehotage;
@@ -539,7 +539,7 @@
 		};
 
 		case 29: {
-			_missiontext = [_missionname, "Destroy an UAV terminal"];
+			_missiontext = [_missionname, "Destroy a UAV terminal"];
 			_vehicle = createVehicle ["TK_WarfareBUAVterminal_EP1", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_protectobject;
 			_missiontype = "destroy";
@@ -547,16 +547,16 @@
 		};
 
 		case 30: {
-			_missiontext = [_missionname, "Liberate an officer"];
+			_missiontext = [_missionname, "Rescue a Lingorian officer"];
 			_group = createGroup west;
-			_vehicle = _group createUnit ["UN_CDF_Soldier_Officer_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["LIN_Officer", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_liberatehotage;
 			_missiontype = "liberate";
 			wcbonusfame = 0;
 		};
 
 		case 31: {
-			_missiontext = [_missionname, "Liberate a tourist"];
+			_missiontext = [_missionname, "Rescue a tourist"];
 			_group = createGroup west;
 			_vehicle = _group createUnit ["CIV_EuroWoman01_EP1", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_liberatehotage;
@@ -578,7 +578,7 @@
 
 		case 33: {
 			_missiontext = [_missionname, "Sabotage a T72"];
-			_vehicle = createVehicle ["T72_TK_EP1", _position, [], 0, "NONE"];
+			_vehicle = createVehicle ["T72_INS", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
 			_camo setdir getdir _vehicle;
@@ -596,7 +596,7 @@
 		};
 
 		case 35: {
-			_missiontext = [_missionname, "Steal a secret document"];
+			_missiontext = [_missionname, "Steal new drugs formula"];
 			_house = nearestObjects [_position, ["House"], 500];
 			_house = _house call BIS_fnc_selectRandom;
 			_vehicle = createVehicle ["EvMoscow", position _house, [], 0, "NONE"];
@@ -622,7 +622,7 @@
 
 		case 36: {
 			_missiontext = [_missionname, "Steal a BRDM2"];
-			_vehicle = createVehicle ["BRDM2_TK_EP1", _position, [], 0, "NONE"];
+			_vehicle = createVehicle ["BRDM2_INS", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
 			_camo setdir getdir _vehicle;
@@ -633,8 +633,8 @@
 		};
 
 		case 37: {
-			_missiontext = [_missionname, "Steal a BTR60"];
-			_vehicle = createVehicle ["BTR60_TK_EP1", _position, [], 0, "NONE"];
+			_missiontext = [_missionname, "Steal a Ural"];
+			_vehicle = createVehicle ["UralCivil", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
 			_camo setdir getdir _vehicle;
@@ -645,8 +645,8 @@
 		};
 
 		case 38: {
-			_missiontext = [_missionname, "Steal an Ural"];
-			_vehicle = createVehicle ["UralRefuel_TK_EP1", _position, [], 0, "NONE"];
+			_missiontext = [_missionname, "Steal a Ural"];
+			_vehicle = createVehicle ["UralRefuel_INS", _position, [], 0, "NONE"];
 			_camo = createVehicle ["Land_CamoNetB_EAST_EP1", [0,0,0], [], 0, "NONE"];
 			_camo allowdammage false;
 			_camo setdir getdir _vehicle;
@@ -658,27 +658,27 @@
 		};
 
 		case 39: {
-			_missiontext = [_missionname, "Capture a takistani commander"];
+			_missiontext = [_missionname, "Capture a rebel commander"];
 			_group = createGroup east;
-			_vehicle = _group createUnit ["TK_Aziz_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["ibr_arl_officer", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_jail;
 			_missiontype = "jail";
 			wcbonusfame = 0;
 		};
 
 		case 40: {
-			_missiontext = [_missionname, "Capture a takistani officer"];
+			_missiontext = [_missionname, "Capture a drug cartel officer"];
 			_group = createGroup east;
-			_vehicle = _group createUnit ["TK_Soldier_Officer_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["ibr_drg_officer", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_jail;
 			_missiontype = "jail";
 			wcbonusfame = 0;
 		};
 
 		case 41: {
-			_missiontext = [_missionname, "Capture a war lord"];
+			_missiontext = [_missionname, "Capture a rogue agent"];
 			_group = createGroup east;
-			_vehicle = _group createUnit ["TK_GUE_Warlord_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["ibr_bodyguard", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_jail;
 			_missiontype = "jail";
 			wcbonusfame = 0.1;
@@ -687,7 +687,7 @@
 		case 42: {
 			_missiontext = [_missionname, "Capture a civilian"];
 			_group = createGroup east;
-			_type = ["TK_CIV_Takistani01_EP1", "TK_CIV_Takistani02_EP1", "TK_CIV_Takistani03_EP1", "TK_CIV_Takistani04_EP1", "TK_CIV_Takistani05_EP1", "TK_CIV_Takistani06_EP1", "TK_CIV_Woman01_EP1", "TK_CIV_Woman02_EP1", "TK_CIV_Woman03_EP1", "TK_CIV_Worker01_EP1", "TK_CIV_Worker02_EP1"] call BIS_fnc_selectRandom;
+			_type = ["ibr_lingorman1", "ibr_lingorman2", "ibr_lingorman3", "ibr_lingorman4", "ibr_lingorman5", "ibr_lingorman6", "ibr_lingorman7", "ibr_arl_stoner1", "ibr_arl_stoner2", "ibr_arl_stoner3", "ibr_arl_stone4"] call BIS_fnc_selectRandom;
 			_vehicle = _group createUnit [_type, _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_jail;
 			_missiontype = "jail";
@@ -706,7 +706,7 @@
 		};
 
 		case 44: {
-			_missiontext = [_missionname, "Retrieve an UH1"];
+			_missiontext = [_missionname, "Retrieve a UH1"];
 			_vehicle = createVehicle ["UH1H_TK_EP1", _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_rob;
 			_varname="bonusuh1";
@@ -774,9 +774,9 @@
 		};
 
 		case 50: {
-			_missiontext = [_missionname, "Kill a takistani woman civil"];
+			_missiontext = [_missionname, "Kill a Lingorian civilian woman"];
 			_group = createGroup civilian;
-			_vehicle = _group createUnit ["TK_CIV_Woman01_EP1", _position, [], 0, "NONE"];
+			_vehicle = _group createUnit ["Damsel1", _position, [], 0, "NONE"];
 			_buildings = nearestObjects [position _vehicle, ["House"], 350];
 			_arrayofpos = [];
 			{
@@ -867,7 +867,7 @@
 
 		case 56: {
 			_missiontext = [_missionname,"Defend the barracks"];
-			_vehicle = (nearestObjects [_position, ["Land_Mil_Barracks_i_EP1"], 400]) call BIS_fnc_selectRandom;
+			_vehicle = (nearestObjects [_position, ["Land_Church_03"], 400]) call BIS_fnc_selectRandom;
 			_vehicle setVehicleInit "this addAction ['<t color=''#ff4500''>Defend the barrack</t>', 'warcontext\actions\WC_fnc_dobegindefend.sqf',[],6,false];";
 			wcgarbage = [_vehicle] spawn WC_fnc_defend;
 			processInitCommands;
@@ -913,9 +913,9 @@
 		};
 
 		case 60: {
-			_missiontext = [_missionname, "Retrieve an AH64D"];
+			_missiontext = [_missionname, "Retrieve an AS350"];
 			_hangar = (nearestObjects [_position, ["Land_Mil_hangar_EP1"], 400]) call BIS_fnc_selectRandom;
-			_vehicle = "AH64D_EP1" createvehicle position _hangar;
+			_vehicle = "ibr_as350_gal" createvehicle position _hangar;
 			_vehicle setdir (getdir _hangar + 180);
 			wcgarbage = [_vehicle] spawn WC_fnc_rob;
 			_varname="bonusf35b";
@@ -958,7 +958,7 @@
 
 		case 64: {
 			_missiontext = [_missionname, "Heal a civilian"];
-			_type = ["TK_CIV_Takistani01_EP1", "TK_CIV_Takistani02_EP1", "TK_CIV_Takistani03_EP1", "TK_CIV_Takistani04_EP1", "TK_CIV_Takistani05_EP1", "TK_CIV_Takistani06_EP1", "TK_CIV_Woman01_EP1", "TK_CIV_Woman02_EP1", "TK_CIV_Woman03_EP1", "TK_CIV_Worker01_EP1", "TK_CIV_Worker02_EP1"] call BIS_fnc_selectRandom;
+			_type = ["ibr_lingorman1","ibr_lingorman2","ibr_lingorman3","ibr_lingorman4","ibr_lingorman5","ibr_lingorman6","ibr_lingorman7","ibr_lingorman1s","ibr_lingorman2s","ibr_lingorman3s","ibr_lingorman4s","ibr_lingorman5s","ibr_lingorman6s","ibr_lingorman7s","Functionary1", "Functionary2","Damsel1","Damsel2","Damsel3","Damsel4","Damsel5","Hooker1","Hooker2","Hooker3","Hooker4","Hooker5"] call BIS_fnc_selectRandom;
 			_group = createGroup civilian;
 			_vehicle = _group createUnit [_type, _position, [], 0, "NONE"];
 			wcgarbage = [_vehicle] spawn WC_fnc_heal;
@@ -1019,8 +1019,8 @@
 		};
 
 		case 71: {
-			_missiontext = [_missionname, "Secure an Airfield zone"];
-			_vehicle = (nearestObjects [_position, ["Land_Mil_hangar_EP1"], 400]) call BIS_fnc_selectRandom;
+			_missiontext = [_missionname, "Secure a hotel"];
+			_vehicle = (nearestObjects [_position, ["Land_ibrhotel"], 400]) call BIS_fnc_selectRandom;
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
 			_missiontype = "secure";
 			wcbonusfame = 0;
@@ -1077,6 +1077,9 @@
 			wcbonusfame = 0;
 		};
 
+		
+		
+		
 		case 100: {
 			_missiontext = [_missionname," Kill the enemy leader"];
 			_vehicle = imam;
