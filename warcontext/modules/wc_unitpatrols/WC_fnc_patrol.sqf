@@ -37,8 +37,6 @@
 	_move = true;
 	_lastcible = objnull;
 
-	_wptype = ["MOVE","DESTROY", "SAD", "HOLD", "SENTRY", "GUARD", "TALK"];
-
 	_marker = [format['patrolzone%1', wcpatrolindex], _areasize, (position _leader), 'ColorGREEN', 'ELLIPSE', 'FDIAGONAL', '', 0, '', false] call WC_fnc_createmarkerlocal;
 	wcpatrolindex = wcpatrolindex + 1;
 
@@ -46,13 +44,14 @@
 		_leader = leader _group;
 
 		if((wcalert > 50) || (count (units _group) < _originalsize)) then {
+			_wptype = ["DESTROY", "SAD"];
 			_group setBehaviour "AWARE";
 			_group setCombatMode "RED";
 
 			_cibles = [];
 
 			_list = (getmarkerpos _marker) nearEntities [["Man"], _areasize];
-			if(count _list == 0) then {
+			if(count _list > 0) then {
 				{
 					if(side _x == west) then {
 						if( _x distance (_leader getHideFrom _x) < 100) then {
@@ -61,6 +60,7 @@
 					} else {
 						_list = _list - [_x];
 					};
+					sleep 0.1;
 				}foreach _list;
 		
 				if(count _cibles == 0) then {
@@ -78,10 +78,12 @@
 						_x domove _position;
 					};
 					_x dofire _cible;
+					sleep 0.1;
 				}foreach (units _group);
 			};
 			sleep 30;
 		} else {
+			_wptype = ["MOVE","DESTROY", "SAD", "HOLD", "SENTRY", "GUARD", "TALK"];
 			_group setBehaviour "SAFE";
 			_group setCombatMode "GREEN";
 
