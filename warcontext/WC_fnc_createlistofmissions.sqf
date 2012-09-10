@@ -83,7 +83,10 @@
 		} else {
 			_missionnumber = 100;
 		};
-		_missionnumber = 17;
+		
+		//DEBUG: Choose a specific mission to test here!
+		//_missionnumber = 17;
+		
 		_thislist = _thislist + [_missionnumber];
 
 		// defend mission
