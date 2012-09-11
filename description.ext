@@ -7,7 +7,7 @@ class Header
 {
 	gameType = COOP;
 	minPlayers = 1;
-	maxPlayers = 35;
+	maxPlayers = 39;
 };
 
 // description.ext settings for revive
