@@ -1513,6 +1513,88 @@ class Mission
 				};
 			};
 		};
+		class Item44
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2965.8628,13.443283,6255.2559};
+					id=964;
+					side="CIV";
+					vehicle="Haris_Press_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="Lingor_Press1";
+					description="AAN Reporter Haris";
+				};
+			};
+		};
+		class Item45
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={2966.2708,13.118944,6263.5444};
+					id=966;
+					side="CIV";
+					vehicle="Dr_Annie_Baker_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="Lingor_Doctor_Annie";
+					description="UNHCR Dr Annie Baker";
+				};
+				class Item1
+				{
+					position[]={2964.9119,13.658627,6275.3647};
+					id=967;
+					side="CIV";
+					vehicle="Dr_Hladik_EP1";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="Lingor_Doctor_Hladik";
+					description="UNHCR Dr Hladik";
+				};
+				class Item2
+				{
+					position[]={2957.5752,14.363181,6272.3755};
+					id=965;
+					side="CIV";
+					vehicle="ibr_paramedic";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="Lingor_Paramedic";
+					description="UNHCR Paramedic";
+				};
+			};
+		};
+		class Item46
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2963.6892,13.290792,6268.978};
+					id=968;
+					side="CIV";
+					vehicle="ibr_van_AMB";
+					player="PLAY CDG";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="Lingor_Medic";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
