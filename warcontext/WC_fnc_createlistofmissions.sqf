@@ -35,7 +35,7 @@
 	_thislist = [];
 
 	// Add a mission? Increment this!
-	_maxnumberofmission = 81;
+	_maxnumberofmission = 82;
 
 	if(wclevel < 10) then {
 		_countofmission = 1 + ceil(random 10);

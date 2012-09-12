@@ -299,7 +299,7 @@
 	wcstaticinbunkerprobability = 0.3;
 
 	// size of area to detect friendly units leave the zone at end of mission
-	wcleaveareasizeatendofmission = 1000;
+	wcleaveareasizeatendofmission = 500;
 
 	// percent of players that must leave the zone at end of mission (by defaut 20%)
 	wcleaversatendofmission = 0.2;
