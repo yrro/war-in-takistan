@@ -1,0 +1,23 @@
+
+Land_House_C_2_EP1 <-- cafe
+Land_House_C_2_EP1 <-- row of shops
+Land_A_Office01_EP1 <-- school/office
+Land_MBG_Stands <--- stadium stnads
+Land_HouseB_Tenement <-- hotel / tenement
+Land_Shed_M01 <-- tiny shack
+Land_Shed_M02 
+Land_Shed_M03 
+Land_Shed_W01
+Land_A_Villa_EP1 <--- palace
+Land_A_statue01  <-- statue
+Land_A_Castle_Wall2_Corner <-- castle wall
+Land_MBG_Radiotelescope <-- telescope
+Land_Ind_Shed_01_main <--- open walled shed
+Land_ibrhotel <--- hotel
+Land_ibr_FuelStation_Shed <--- fuel station pumps
+Land_ibr_FuelStation_Build  <--- fuel station
+Land_A_GeneralStore_01a  <--- store
+Land_Church_02 <-- church
+Land_Church_03 <--- big orthodox church
+Land_a_stationhouse <--- factory
+Land_Tovarna2 <--- big factory

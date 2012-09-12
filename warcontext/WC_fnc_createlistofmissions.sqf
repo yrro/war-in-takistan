@@ -140,11 +140,18 @@
 		};		
 		
 		if(_missionnumber == 82) then {
-			_numberofgroup = 10; 
-			_numberofvehicle = 12;
+			_numberofgroup = 14; 
+			_numberofvehicle = 10;
 			_vehicle = (nearestObjects [getmarkerpos "respawn_west", ["FlagCarrierNATO_EP1"], 20000]) call BIS_fnc_selectRandom;
 			_position = position _vehicle;
 		};			
+		
+		if(_missionnumber == 83) then {
+			_numberofgroup = 8; 
+			_numberofvehicle = 1;		
+			_vehicle = (nearestObjects [getmarkerpos "respawn_west", ["Land_MBG_Radiotelescope"], 20000]) call BIS_fnc_selectRandom;
+			_position = position _vehicle;
+		};	
 
 		if(_missionnumber == 100) then { _numberofgroup = 16; _numberofvehicle = 10; };
 
