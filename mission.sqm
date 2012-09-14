@@ -129,7 +129,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=44;
+		items=46;
 		class Item0
 		{
 			side="LOGIC";
@@ -3477,7 +3477,7 @@ class Mission
 		};
 		class Item187
 		{
-			position[]={3035.1819,17.631622,7211.5903};
+			position[]={2986.198,21.73992,7321.3154};
 			azimut=173.442;
 			id=196;
 			side="EMPTY";

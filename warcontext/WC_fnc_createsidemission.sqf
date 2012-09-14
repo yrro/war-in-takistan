@@ -1179,7 +1179,15 @@
 			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
 			_missiontype = "secure";
 			wcbonusfame = 0;
-		};			
+		};		
+
+		case 83: {
+			_missiontext = [_missionname,"Defend","a Radio Telescope"];
+			_vehicle = (nearestObjects [_position, ["Land_MBG_Radiotelescope"], 400]) call BIS_fnc_selectRandom;
+			wcgarbage = [_vehicle] spawn WC_fnc_securezone;
+			_missiontype = "secure";
+			wcbonusfame = 0;
+		};	
 		
 		case 100: {
 			_missiontext = [_missionname," Kill the enemy leader"];
